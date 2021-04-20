@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="container">
       <div className='tab'>
-        <nav className='tab__container'>
+        <nav className='tab__container tab__container--start-shadow tab__container--end-shadow'>
           <ul className="tab__list">
             {tabs.map(tab => (
               <li
