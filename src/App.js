@@ -36,7 +36,10 @@ function App() {
                   currentTabId === tab.id
                     ? "tab__link tab__link__active"
                     : 'tab__link'
-                }>
+                  }
+                   href='/'
+                   onClick={event => event.preventDefault()}
+                >
                   {tab.title}
                 </a>
               </li>
