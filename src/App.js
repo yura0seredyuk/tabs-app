@@ -38,7 +38,9 @@ function App() {
                     : 'tab__link'
                 }
                    href='/'
-                   onClick={event => event.preventDefault()}
+                   onClick={event => {
+                     event.preventDefault();
+                   }}
                 >
                   {tab.title}
                 </a>
