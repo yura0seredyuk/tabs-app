@@ -17,8 +17,8 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <div className='tab'>
+    <div className="container tab">
+      <div className='tab__border'>
         <nav className='tab__container tab__container--start-shadow tab__container--end-shadow'>
           <ul className="tab__list">
             {tabs.map(tab => (
@@ -36,7 +36,7 @@ function App() {
                   currentTabId === tab.id
                     ? "tab__link tab__link__active"
                     : 'tab__link'
-                  }
+                }
                    href='/'
                    onClick={event => event.preventDefault()}
                 >
@@ -46,10 +46,10 @@ function App() {
             ))}
           </ul>
         </nav>
+      </div>
 
-        <div className='tab__text'>
-          {currentTabTitle}
-        </div>
+      <div className='tab__text'>
+        {currentTabTitle}
       </div>
     </div>
   );

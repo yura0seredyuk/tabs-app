@@ -1,22 +1,27 @@
 html {
-  --top-margin: 10px;
+  --top-margin: 32px;
 }
 
-.tab {
+.container {
   margin-top: var(--top-margin);
+}
+
+.tab__border {
+  box-shadow: inset 0 -1px 0 #E0E0E0, inset 0 1px 0 #E0E0E0;
 }
 
 .tab__container {
   overflow-x: scroll;
-  box-shadow: inset 0 -1px 0 #E0E0E0, inset 0 1px 0 #E0E0E0;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  margin: 0 32px;
 }
 
 .tab__container--start-shadow::before {
   content: '';
   background: linear-gradient(90deg, rgba(196, 196, 196, 0.3) 0%, rgba(242, 242, 242, 0) 88.1%);
   position: absolute;
+  left: 0;
   width: 42px;
   height: 53px;
 }
@@ -38,17 +43,18 @@ html {
 
 .tab__list {
   display: flex;
-  margin: 8px 0;
-  padding: 0;
+  margin: 0;
+  padding: 8px 0;
 }
 
 .tab__item {
+  white-space: nowrap;
+  list-style: none;
   padding: 8px 24px;
   border-radius: 2px;
-  list-style: none;
-  white-space: nowrap;
   line-height: 140%;
   transition-duration: 200ms;
+  cursor: pointer;
 }
 
 .tab__item:hover {
@@ -61,8 +67,6 @@ html {
 }
 
 .tab__item__active {
-  padding: 8px 24px;
-  border-radius: 2px;
   background-color: #CFE5FF;
   font-weight: 700;
   line-height: 140%;
@@ -70,9 +74,6 @@ html {
 
 .tab__item__active,
 .tab__link__active {
-  position: sticky;
-  left: 0;
-  right: 0;
   cursor: pointer;
   -moz-user-select: none;
   -khtml-user-select: none;
