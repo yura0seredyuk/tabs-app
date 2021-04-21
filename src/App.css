@@ -39,11 +39,7 @@ html {
 .tab__list {
   display: flex;
   margin: 8px 0;
-  padding: 0 33px;
-}
-
-.tab__list:last-child {
-  margin-right: 33px;
+  padding: 0;
 }
 
 .tab__item {
@@ -67,9 +63,17 @@ html {
   color: #527AAA;
   font-weight: 700;
   line-height: 140%;
+}
+
+.tab__item__active,
+.tab__link__active {
   position: sticky;
-  left: 33px;
+  left: 0;
   right: 0;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 .tab__text {

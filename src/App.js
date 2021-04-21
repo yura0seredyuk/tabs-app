@@ -32,7 +32,13 @@ function App() {
                 key={tab.id}
                 onClick={() => choseTabId(tab.id)}
               >
-                <a className='tab__link'>{tab.title}</a>
+                <a className={
+                  currentTabId === tab.id
+                    ? "tab__link tab__link__active"
+                    : 'tab__link'
+                }>
+                  {tab.title}
+                </a>
               </li>
             ))}
           </ul>
