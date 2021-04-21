@@ -6,35 +6,74 @@ html {
   margin-top: var(--top-margin);
 }
 
-.tab__border {
-  box-shadow: inset 0 -1px 0 #E0E0E0, inset 0 1px 0 #E0E0E0;
-}
-
 .tab__container {
   overflow-x: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  margin: 0 32px;
+  margin: 0 auto;
+
+
+
+  outline: 1px solid #E0E0E0;
+  position: relative;
+  z-index: 1;
+  overflow-y: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  background: #FFF no-repeat;
+  background-image:
+          -webkit-radial-gradient(farthest-side at 0 50%, rgba(0,0,0,0.2), rgba(0,0,0,0)),
+          -webkit-radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,0.2), rgba(0,0,0,0));
+  background-image:
+          -o-radial-gradient(farthest-side at 0 50% , rgba(0,0,0,0.2), rgba(0,0,0,0)),
+          -o-radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,0.2), rgba(0,0,0,0));
+  background-image:
+          radial-gradient(farthest-side at 0 50%, rgba(0,0,0,0.2), rgba(0,0,0,0)),
+          radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,0.2), rgba(0,0,0,0));
+  background-position: 0 0, 100% 0;
+  background-size: 1rem 100%;
 }
 
-.tab__container--start-shadow::before {
+
+.tab__container::before,
+.tab__container::after {
   content: '';
-  background: linear-gradient(90deg, rgba(196, 196, 196, 0.3) 0%, rgba(242, 242, 242, 0) 88.1%);
-  position: absolute;
-  left: 0;
-  width: 42px;
-  height: 53px;
+  position: relative;
+  z-index: -1;
+  display: block;
+  min-width: 2rem;
+  margin: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
-.tab__container--end-shadow::after {
-  content: '';
-  background: linear-gradient(90deg, rgba(196, 196, 196, 0.3) 0%, rgba(242, 242, 242, 0) 88.1%);
-  position: absolute;
-  transform: rotate(-180deg);
-  top: var(--top-margin);
-  right: 0;
-  width: 42px;
-  height: 53px;
+.tab__container::before {
+  max-width: 2rem;
+  background: -webkit-gradient(linear,left top, right top,from(#FFF),color-stop(50%, #FFF),to(rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(left,#FFF,#FFF 50%,rgba(255,255,255,0));
+  background: -o-linear-gradient(left,#FFF,#FFF 50%,rgba(255,255,255,0));
+  background: linear-gradient(to right,#FFF,#FFF 50%,rgba(255,255,255,0));
+}
+
+.tab__container::after {
+  background: -webkit-gradient(linear,left top, right top,from(rgba(255,255,255,0)),color-stop(50%, #FFF),to(#FFF));
+  background: -webkit-linear-gradient(left,rgba(255,255,255,0),#FFF 50%,#FFF);
+  background: -o-linear-gradient(left,rgba(255,255,255,0),#FFF 50%,#FFF);
+  background: linear-gradient(to right,rgba(255,255,255,0),#FFF 50%,#FFF);
 }
 
 .tab__container::-webkit-scrollbar {
@@ -45,6 +84,16 @@ html {
   display: flex;
   margin: 0;
   padding: 8px 0;
+
+
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
 }
 
 .tab__item {
