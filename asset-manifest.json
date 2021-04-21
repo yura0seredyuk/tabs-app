@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/tabs-app/static/css/main.10c35a00.chunk.css",
-    "main.js": "/tabs-app/static/js/main.0b50fd27.chunk.js",
-    "main.js.map": "/tabs-app/static/js/main.0b50fd27.chunk.js.map",
+    "main.css": "/tabs-app/static/css/main.88d8211b.chunk.css",
+    "main.js": "/tabs-app/static/js/main.e27fa0e7.chunk.js",
+    "main.js.map": "/tabs-app/static/js/main.e27fa0e7.chunk.js.map",
     "runtime-main.js": "/tabs-app/static/js/runtime-main.1717105e.js",
     "runtime-main.js.map": "/tabs-app/static/js/runtime-main.1717105e.js.map",
     "static/js/2.b291a5e9.chunk.js": "/tabs-app/static/js/2.b291a5e9.chunk.js",
     "static/js/2.b291a5e9.chunk.js.map": "/tabs-app/static/js/2.b291a5e9.chunk.js.map",
     "index.html": "/tabs-app/index.html",
-    "static/css/main.10c35a00.chunk.css.map": "/tabs-app/static/css/main.10c35a00.chunk.css.map",
+    "static/css/main.88d8211b.chunk.css.map": "/tabs-app/static/css/main.88d8211b.chunk.css.map",
     "static/js/2.b291a5e9.chunk.js.LICENSE.txt": "/tabs-app/static/js/2.b291a5e9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1717105e.js",
     "static/js/2.b291a5e9.chunk.js",
-    "static/css/main.10c35a00.chunk.css",
-    "static/js/main.0b50fd27.chunk.js"
+    "static/css/main.88d8211b.chunk.css",
+    "static/js/main.e27fa0e7.chunk.js"
   ]
 }
